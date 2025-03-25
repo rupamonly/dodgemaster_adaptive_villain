@@ -1200,9 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dff6591cfc74d544be892f0e2c14d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  dodgeSpeed: 5
-  wallDetectionDistance: 1
+  dodgeSpeed: 10
 --- !u!114 &1693698800
 MonoBehaviour:
   m_ObjectHideFlags: 0
