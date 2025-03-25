@@ -40,7 +40,7 @@ public class VillainController : MonoBehaviour
             redBallHits++;
 
             // Enable dodging after 2 hits
-            if (redBallHits >= 2)
+            if (redBallHits >= 5)
             {
                 canDodge = true;
                 Debug.Log("Villain learned to dodge after 2 hits!");
