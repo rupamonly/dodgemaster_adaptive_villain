@@ -6,7 +6,7 @@ public class VillainController : MonoBehaviour
 {
     private Perceptron perceptron;
     private Rigidbody2D rb;
-    public float dodgeSpeed = 5f;
+    public float dodgeSpeed = 10f;
     private bool canDodge = false;
     private int redBallHits = 0;  // To enable learning after 2 hits
     private float lastBallSpeed = 0f;
@@ -106,6 +106,7 @@ public class VillainController : MonoBehaviour
         int targetOutput = success ? 1 : 0; // 1 = Successful dodge, 0 = Fail
         perceptron.Train(inputs, targetOutput);
     }
+
 }
 
 
