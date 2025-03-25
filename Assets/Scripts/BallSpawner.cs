@@ -36,11 +36,39 @@ public class BallSpawner : MonoBehaviour
         }
     }
 
+// void OnCollisionEnter2D(Collision2D collision)
+//     {
+//         // Destroy ball immediately if it hits a wall
+//         if (collision.gameObject.CompareTag("Wall"))
+//         {
+//             Destroy(gameObject);
+//         }
+//     }
+
     void ShootBall()
+{
+    GameObject ball = Instantiate(selectedBall, transform.position, Quaternion.identity);
+    Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
+    rb.velocity = transform.up * ballSpeed;
+
+    // Determine ball type
+    string ballType = "NoDamage";
+    if (selectedBall == redBallPrefab || selectedBall == blueBallPrefab)
     {
-        GameObject ball = Instantiate(selectedBall, transform.position, Quaternion.identity);
-        Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.up * ballSpeed;  // Shoots in the direction player is facing
-        Destroy(ball, 5f); // Destroy the ball after 5 seconds
+        ballType = "Damage";
     }
+
+    // Notify villain to dodge if ready
+    VillainController villain = FindObjectOfType<VillainController>();
+    if (villain != null)
+    {
+        Vector2 ballDirection = rb.velocity.normalized;
+        float ballSpeedMagnitude = rb.velocity.magnitude;
+
+        villain.DodgeBall(ballDirection, ballType, ballSpeedMagnitude, false);
+    }
+
+    Destroy(ball, 5f);  // Destroy ball after 5 seconds
+}
+
 }

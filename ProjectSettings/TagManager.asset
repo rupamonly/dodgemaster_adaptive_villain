@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - RedBall
+  - BlueBall
+  - Damage
+  - NoDamage
   layers:
   - Default
   - TransparentFX
