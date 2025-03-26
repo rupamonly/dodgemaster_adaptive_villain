@@ -138,25 +138,13 @@ Regenerating Missing Files
 
 - The perceptron only considers four inputs: ball type, distance, speed, and previous dodge success. This restricts its decision-making capabilities and overlooks additional factors that could enhance performance.
 
-⚠️ Slow Learning Rate
-
-- The perceptron requires multiple hits to adjust its decision boundary effectively. The learning rate is fixed, which may result in slower convergence and delayed learning.
-
 ⚠️ No Persistent Memory
 
 - The perceptron resets after every game session, meaning the learning progress is lost when the game restarts. Persistent learning or model saving is not yet implemented.
 
-⚠️ Single Object Tracking
-
-- The current implementation processes one ball at a time. It cannot track or process multiple incoming objects simultaneously, limiting its effectiveness in handling multi-ball scenarios.
-
 ⚠️ Random Dodge Direction
 
 - The villain’s dodge direction is randomized (left or right), which may lead to inconsistent or suboptimal dodge behavior.
-
-⚠️ Lack of Advanced Animation
-
-- The project currently lacks advanced animations, such as smooth eye movements or visually appealing dodge sequences, which could enhance user engagement.
 
 ## 📈 Future Scope
 - Upgrade to Multi-Layer Perceptron (MLP) to handle more complex decision-making scenarios.
