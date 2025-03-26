@@ -83,6 +83,21 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 
 - Platform: PC (Windows/Mac/Linux)
 
+  ## 🛠️ Technologies Used
+- Unity 2022.3.40f1 – Game engine for developing the 2D game.
+
+- C# – Programming language used for implementing game logic and AI behavior.
+
+- Photopea – Online image editor used to create and edit game assets, including sprite-based text for UI.
+
+- Kenney Assets – Free game asset package used for creating the villain’s sprites and animations.
+
+- GitHub – Version control and repository hosting for project management and collaboration.
+
+- GitHub Desktop – GUI-based version control tool used for managing commits and pushing changes to the repository.
+
+- ShaderLab & HLSL – Used implicitly by Unity for rendering graphics and managing shaders.
+
 
 ## 📥 Clone and Run
 
@@ -157,20 +172,6 @@ Regenerating Missing Files
 
 - Enhance visual effects and animations to improve the overall gaming experience.
 
-## 🛠️ Technologies Used
-- Unity 2022.3.40f1 – Game engine for developing the 2D game.
-
-- C# – Programming language used for implementing game logic and AI behavior.
-
-- Photopea – Online image editor used to create and edit game assets, including sprite-based text for UI.
-
-- Kenney Assets – Free game asset package used for creating the villain’s sprites and animations.
-
-- GitHub – Version control and repository hosting for project management and collaboration.
-
-- GitHub Desktop – GUI-based version control tool used for managing commits and pushing changes to the repository.
-
-- ShaderLab & HLSL – Used implicitly by Unity for rendering graphics and managing shaders.
 
 
 ## 📜 License 
