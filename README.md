@@ -130,20 +130,11 @@ Unity Version Compatibility
 Auto-Generated Folders and Files
 - ⚠️ Important: Several folders and files are not included in the repository due to their large size or auto-generated nature. Unity will regenerate these automatically when you open the project. These include:
 
-- Library – Stores cached and temporary data.
-
-- Logs – Contains logs for debugging and performance tracking.
-
-- ProjectSettings – Contains project-specific settings (input mappings, quality settings, etc.).
-
-- UserSettings – Stores user-specific settings that do not affect other developers.
-
 - .vs, .sln, and Assembly-CSharp.csproj – Generated for Visual Studio or other IDEs.
 
 Regenerating Missing Files
-- When you open the project in Unity:
 
-- Unity will automatically create the missing folders (Library, - Logs, etc.) based on the current project configuration.
+- Unity will automatically create the missing folders (Library, - Logs, etc.) based on the current project configuration when the project is opened.
 
 
 ## ⚠️ Limitations
