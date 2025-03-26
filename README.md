@@ -1,5 +1,5 @@
 
-# 🕹️ dodgemaster_adaptive_villain
+# 🕹️ dodgemaster_adaptive_npc
 
 This project is a 2D Unity game where a villain learns to dodge incoming balls using a single-layer perceptron. The perceptron is a simple AI model that takes 4 inputs — ball type, distance, speed, and success of the last dodge — and predicts whether the villain should dodge or stay still.
 
@@ -144,6 +144,7 @@ cd dodgemaster_adaptive_villain
 
 - Recommended IDE: Visual Studio or Rider for script editing.
 
+
 ## 📚 Usage Instructions
 
 Unity Version Compatibility
@@ -261,6 +262,5 @@ This project is licensed under the MIT License.
 
 
 
-![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-gree.svg)](./LICENSE)
 
