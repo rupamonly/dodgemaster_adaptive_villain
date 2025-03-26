@@ -144,18 +144,6 @@ cd dodgemaster_adaptive_villain
 
 - Recommended IDE: Visual Studio or Rider for script editing.
 
-## 📄 Project Structure
-
-```
-📂 quiz-app-c
-├── 📂 .vscode          // VS Code config (optional)
-├── 📄 a.exe            // Compiled executable (for Windows)
-├── 📄 README.md        // Project documentation
-├── 📄 questions.txt    // Stores quiz questions and answers
-└── 📄 quizApp.c        // Main source code file
-
-```
-
 ## 📚 Usage Instructions
 
 Unity Version Compatibility
