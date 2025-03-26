@@ -82,8 +82,10 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 🚀 Build & Run Environment
 
 - Platform: PC (Windows/Mac/Linux)
+  
 
-  ## 🛠️ Technologies Used
+## 🛠️ Technologies Used
+
 - Unity 2022.3.40f1 – Game engine for developing the 2D game.
 
 - C# – Programming language used for implementing game logic and AI behavior.
