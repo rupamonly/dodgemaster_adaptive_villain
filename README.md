@@ -21,19 +21,11 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 
 - Control the player using W, A, S, D keys to move:
 
-- W – Move Up
-
-- A – Move Left
-
-- S – Move Down
-
-- D – Move Right
-
+- W – Move Up, A – Move Left, S - Move Down, D - Move Right
+  
 - Press Spacebar to shoot the selected ball in the direction the player is facing.
 
 🎯 Ball Types and Selection:
-
-- Choose between three types of balls:
 
 - 🟢 Green Ball – No Damage (No dodge)
 
@@ -52,12 +44,6 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 - Dynamically decides whether to dodge or not using a single-layer perceptron.
 
 - Perceptron predicts dodge success based on ball type, distance, speed, and previous dodge outcomes.
-
-🔄 Dynamic Adaptation:
-
-- The villain’s behavior changes as it adapts to new ball speeds, types, and hit patterns.
-
-- Changing ball tags dynamically retrains the perceptron to adjust its responses.
 
 🕹️ Collision and Training Logic:
 
