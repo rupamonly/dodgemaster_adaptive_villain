@@ -10,8 +10,6 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 
 - The perceptron dynamically updates its weights based on whether the villain successfully dodges or fails.
 
-- Over time, the villain improves its dodge ability by adjusting to changes in ball types and speed.
-
 - The villain is given a kickstart after some hits to trigger dodging behavior and then the perceptron fine-tunes itself with every new encounter, gradually enhancing dodge accuracy.
 
 
@@ -51,10 +49,6 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 
 - Updates perceptron weights after each successful or failed dodge.
 
-🛠️ Perceptron Reset After Tag Change
-
-- Resets perceptron and learning mechanism when ball tags are swapped to prevent misclassification.
-
 ## ⚙️ Requirements to Run This Project ⚙️
 
 🖥️ Unity Version
@@ -76,17 +70,6 @@ This project is a 2D Unity game where a villain learns to dodge incoming balls u
 - Player Prefab with attached BallSpawner script.
 
 - Villain Prefab with attached VillainController script.
-
-
-🎮 Input Mapping
-
-- Ensure default input keys are mapped:
-
-- W, A, S, D – Player movement.
-
-- G, R, B – Select ball type.
-
-- Spacebar – Shoot the selected ball.
 
 🧠 Physics Settings
 
@@ -112,31 +95,20 @@ cd dodgemaster_adaptive_villain
 
 ```
 🎮 Open in Unity
-- Open Unity Hub.
-
-- Click on Open.
-
-- Select the cloned project folder.
+- Open Unity Hub -> Click on Open -> Select the cloned project folder
 
 ▶️ Run the Game
-- Click File → Build Settings.
+- Click File → Build Settings
 
-- Set the target platform to PC, Mac & Linux Standalone (or any desired platform).
+- Set the target platform to PC, Mac & Linux Standalone (or any desired platform)
 
-- Click Play in the Unity Editor to run the game.
-
-⚠️ Important Notes
-- Make sure to use Unity 2021 or higher for compatibility.
-
-- Recommended IDE: Visual Studio or Rider for script editing.
+- Click Play in the Unity Editor to run the game
 
 
 ## 📚 Usage Instructions
 
 Unity Version Compatibility
-- Ensure that Unity 2021.3.x LTS or later is installed.
-
-- Open the project in the Unity Hub by selecting Open and choosing the root folder of the cloned repository.
+- Ensure that Unity 2022.3.41f LTS or any other version is installed.
 
 Auto-Generated Folders and Files
 - ⚠️ Important: Several folders and files are not included in the repository due to their large size or auto-generated nature. Unity will regenerate these automatically when you open the project. These include:
@@ -156,45 +128,33 @@ Regenerating Missing Files
 
 - Unity will automatically create the missing folders (Library, - Logs, etc.) based on the current project configuration.
 
-If you encounter errors after cloning the project, perform the following steps:
-
-- Rebuild Project Settings:
-- Delete the ProjectSettings folder and reopen Unity to regenerate it.
-
-- Recompile Assemblies:
-- Unity will automatically regenerate .csproj and .sln files when reloaded.
-
-Git Ignore Configuration
-- These folders and files are ignored by default using a .gitignore file. This prevents pushing large, unnecessary files that may slow down the repository and are specific to individual machines.
-
-
 
 ## ⚠️ Limitations
-Single-Layer Perceptron
+⚠️ Single-Layer Perceptron
 
 - The system uses a basic perceptron with limited learning capacity. It is unable to handle non-linearly separable data, which limits its ability to handle complex scenarios.
 
-Limited Input Features
+⚠️ Limited Input Features
 
 - The perceptron only considers four inputs: ball type, distance, speed, and previous dodge success. This restricts its decision-making capabilities and overlooks additional factors that could enhance performance.
 
-Slow Learning Rate
+⚠️ Slow Learning Rate
 
 - The perceptron requires multiple hits to adjust its decision boundary effectively. The learning rate is fixed, which may result in slower convergence and delayed learning.
 
-No Persistent Memory
+⚠️ No Persistent Memory
 
 - The perceptron resets after every game session, meaning the learning progress is lost when the game restarts. Persistent learning or model saving is not yet implemented.
 
-Single Object Tracking
+⚠️ Single Object Tracking
 
 - The current implementation processes one ball at a time. It cannot track or process multiple incoming objects simultaneously, limiting its effectiveness in handling multi-ball scenarios.
 
-Random Dodge Direction
+⚠️ Random Dodge Direction
 
 - The villain’s dodge direction is randomized (left or right), which may lead to inconsistent or suboptimal dodge behavior.
 
-Lack of Advanced Animation
+⚠️ Lack of Advanced Animation
 
 - The project currently lacks advanced animations, such as smooth eye movements or visually appealing dodge sequences, which could enhance user engagement.
 
@@ -223,10 +183,6 @@ Lack of Advanced Animation
 - GitHub Desktop – GUI-based version control tool used for managing commits and pushing changes to the repository.
 
 - ShaderLab & HLSL – Used implicitly by Unity for rendering graphics and managing shaders.
-
-- ShaderLab – Unity’s language to define shader properties.
-
-- HLSL (High-Level Shader Language) – Shader code used by Unity for custom rendering effects.
 
 
 ## 📜 License 
