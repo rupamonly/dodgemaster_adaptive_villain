@@ -20,7 +20,7 @@ public class VillainController : MonoBehaviour
     // Reset perceptron after tag change
     public void ResetPerceptron()
     {
-        perceptron = new Perceptron(4); n
+        perceptron = new Perceptron(4); 
         redBallHits = 0;
         canDodge = false;
         Debug.Log("Perceptron reset after tag change.");
