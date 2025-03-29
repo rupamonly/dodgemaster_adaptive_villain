@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float bounceForce = 5f; // Adjust bounce intensity
+    public float bounceForce = 5f; 
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool recentlyBounced = false;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!recentlyBounced) // Prevent overriding bounce effect
+        if (!recentlyBounced) 
         {
             rb.velocity = moveInput * moveSpeed;
         }
@@ -34,13 +34,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Wall Hit! Bouncing...");
 
-            // Get direction opposite to collision
+            
             Vector2 bounceDirection = collision.contacts[0].normal;
 
-            // Apply bounce force
+            
             rb.velocity = bounceDirection * bounceForce;
 
-            // Start cooldown to prevent multiple triggers
+            
             StartCoroutine(BounceCooldown());
         }
     }
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator BounceCooldown()
     {
         recentlyBounced = true;
-        yield return new WaitForSeconds(0.5f); // Adjust cooldown for smoother effect
+        yield return new WaitForSeconds(0.5f); 
         rb.velocity=Vector2.zero;       
         recentlyBounced = false;
     }

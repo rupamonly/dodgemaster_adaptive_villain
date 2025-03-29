@@ -20,13 +20,13 @@ public class WallBounce : MonoBehaviour
         {
             Debug.Log("Wall Hit! Bouncing...");
 
-            // Get direction opposite to collision
+            
             Vector2 bounceDirection = collision.contacts[0].normal;
 
-            // Apply bounce force
+            
             rb.velocity = bounceDirection * bounceForce;
 
-            // Start cooldown to prevent multiple bounces
+            
             StartCoroutine(BounceCooldown());
         }
     }
@@ -34,8 +34,8 @@ public class WallBounce : MonoBehaviour
     IEnumerator BounceCooldown()
     {
         recentlyBounced = true;
-        yield return new WaitForSeconds(0.5f);  // Adjust cooldown for smoother effect
-        rb.velocity = Vector2.zero;  // Stop movement after bounce
+        yield return new WaitForSeconds(0.5f);  
+        rb.velocity = Vector2.zero;  
         recentlyBounced = false;
     }
 }

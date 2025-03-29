@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LegMovement : MonoBehaviour
 {
-    public float moveSpeed = 0.4f;       // Speed of movement
-    public float moveAmount = 0.05f;     // Slight movement amount
-    public float delayTime = 0.7f;       // Delay before starting
+    public float moveSpeed = 0.4f;       
+    public float moveAmount = 0.05f;     
+    public float delayTime = 0.7f;       
     private Vector3 startPos;
     private bool isDelayed = true;
 

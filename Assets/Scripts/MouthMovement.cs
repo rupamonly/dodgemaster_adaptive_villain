@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MouthMovement : MonoBehaviour
 {
-    public float moveSpeed = 10f;   // Slightly different speed for variation
-    public float moveAmount = 0.08f; // Slightly more movement for the mouth
-    public float delayTime = 1f;     // Delay for the mouth
+    public float moveSpeed = 10f;   
+    public float moveAmount = 0.08f; 
+    public float delayTime = 1f;     
     private Vector3 startPos;
     private bool isDelayed = true;
 
@@ -27,7 +27,7 @@ public class MouthMovement : MonoBehaviour
 
     IEnumerator StartWithDelay()
     {
-        yield return new WaitForSeconds(delayTime); // Delay before starting animation
+        yield return new WaitForSeconds(delayTime); 
         isDelayed = false;
     }
 }

@@ -8,7 +8,7 @@ public class VillainController : MonoBehaviour
     private Rigidbody2D rb;
     public float dodgeSpeed = 10f;
     private bool canDodge = false;
-    private int redBallHits = 0;  // To enable learning after 2 hits
+    private int redBallHits = 0;  
     private float lastBallSpeed = 0f;
 
     void Start()
@@ -20,36 +20,36 @@ public class VillainController : MonoBehaviour
     // Reset perceptron after tag change
     public void ResetPerceptron()
     {
-        perceptron = new Perceptron(4); // Reinitialize perceptron
+        perceptron = new Perceptron(4); n
         redBallHits = 0;
         canDodge = false;
         Debug.Log("Perceptron reset after tag change.");
     }
 
-    // Detect collision with ball and train perceptron
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         string ballType = collision.gameObject.tag;
-        float ballSpeed = lastBallSpeed;  // Use the last recorded ball speed
+        float ballSpeed = lastBallSpeed;  
 
         if (ballType == "Damage")
         {
             Debug.Log("Hit by: " + collision.gameObject.name);
             
-            // Increase hit count
+            
             redBallHits++;
 
-            // Enable dodging after 2 hits
+            
             if (redBallHits >= 5)
             {
                 canDodge = true;
                 Debug.Log("Villain learned to dodge after 2 hits!");
             }
 
-            // Train perceptron dynamically
+            
             TrainPerceptron(collision.gameObject.transform.position, ballType, ballSpeed, true);
 
-            Destroy(collision.gameObject, 1.0f); // Destroy after delay
+            Destroy(collision.gameObject, 1.0f); 
         }
         else if (ballType == "NoDamage")
         {
@@ -58,10 +58,10 @@ public class VillainController : MonoBehaviour
         }
     }
 
-    // Pass ball data to Perceptron
+    
     public void DodgeBall(Vector2 ballDirection, string ballType, float ballSpeed, bool lastDodgeSuccess)
     {
-        lastBallSpeed = ballSpeed; // Update last ball speed for perceptron training
+        lastBallSpeed = ballSpeed; 
 
         if (canDodge)
         {
@@ -93,7 +93,7 @@ public class VillainController : MonoBehaviour
         }
     }
 
-    // Train perceptron based on success/failure
+    
     public void TrainPerceptron(Vector2 ballDirection, string ballType, float ballSpeed, bool success)
     {
         float ballTypeInput = (ballType == "Damage") ? 1f : 0f;
@@ -130,28 +130,28 @@ public class VillainController : MonoBehaviour
 //     public float dodgeSpeed = 10f;
 //     private float lastBallSpeed = 0f;
     
-//     // Dynamic Training Variables
+//     
 //     private int totalPredictions = 0;
 //     private int correctPredictions = 0;
-//     private float confidenceThreshold = 0.5f;  // Start with 60% confidence
+//     private float confidenceThreshold = 0.5f;  
 
 //     void Start()
 //     {
 //         rb = GetComponent<Rigidbody2D>();
-//         perceptron = new Perceptron(4); // 4 inputs: ball type, distance, speed, last dodge
+//         perceptron = new Perceptron(4); 
 //     }
 
-//     // Reset perceptron after tag change
+//     
 //     public void ResetPerceptron()
 //     {
-//         perceptron = new Perceptron(4); // Reinitialize perceptron
+//         perceptron = new Perceptron(4); 
 //         totalPredictions = 0;
 //         correctPredictions = 0;
 //         confidenceThreshold = 0.6f;
 //         Debug.Log("Perceptron reset after tag change.");
 //     }
 
-//     // Detect collision with ball and train perceptron
+//     
 //     void OnCollisionEnter2D(Collision2D collision)
 //     {
 //         string ballType = collision.gameObject.tag;
@@ -163,7 +163,7 @@ public class VillainController : MonoBehaviour
             
 //             bool wasDodgeSuccessful = DodgeBall(collision.gameObject.transform.position, ballType, ballSpeed, false);
             
-//             // Train perceptron after hit
+//             
 //             TrainPerceptron(collision.gameObject.transform.position, ballType, ballSpeed, wasDodgeSuccessful);
 
 //             Destroy(collision.gameObject, 1.0f);
@@ -175,7 +175,7 @@ public class VillainController : MonoBehaviour
 //         }
 //     }
 
-//     // Pass ball data to Perceptron
+//     
 //     public bool DodgeBall(Vector2 ballDirection, string ballType, float ballSpeed, bool lastDodgeSuccess)
 //     {
 //         lastBallSpeed = ballSpeed;
@@ -192,7 +192,7 @@ public class VillainController : MonoBehaviour
 //         Debug.Log($"Inputs: Type={ballTypeInput}, Distance={normalizedDistance}, Speed={normalizedSpeed}, LastDodge={dodgeSuccess}");
 //         Debug.Log($"Perceptron Decision: {decision}");
 
-//         // Check perceptron confidence
+//         
 //         if (ballType == "Damage" && decision == 1 && GetAccuracy() >= confidenceThreshold)
 //         {
 //             Vector2 dodgeDirection = (Random.value > 0.5f) ? Vector2.right : Vector2.left;
@@ -209,7 +209,7 @@ public class VillainController : MonoBehaviour
 //         }
 //     }
 
-//     // Train perceptron based on success/failure
+//     
 //     public void TrainPerceptron(Vector2 ballDirection, string ballType, float ballSpeed, bool success)
 //     {
 //         float ballTypeInput = (ballType == "Damage") ? 1f : 0f;
@@ -222,7 +222,7 @@ public class VillainController : MonoBehaviour
 //         int targetOutput = success ? 1 : 0;
 //         perceptron.Train(inputs, targetOutput);
 
-//         // Track predictions and adjust confidence dynamically
+//         
 //         totalPredictions++;
 //         if (success)
 //         {
@@ -232,14 +232,14 @@ public class VillainController : MonoBehaviour
 //         UpdateConfidence();
 //     }
 
-//     // Get perceptron prediction accuracy
+//    
 //     private float GetAccuracy()
 //     {
 //         if (totalPredictions == 0) return 0f;
 //         return (float)correctPredictions / totalPredictions;
 //     }
 
-//     // Dynamically update confidence threshold based on accuracy
+//     
 //     private void UpdateConfidence()
 //     {
 //         float accuracy = GetAccuracy();

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HandMovement : MonoBehaviour
 {
-    public float rotationSpeed = 7f;   // Speed of rotation
-    public float rotationAmount = 7f;  // Maximum rotation angle
-    public float delayTime = 0.3f;      // Delay before starting movement
+    public float rotationSpeed = 7f;   
+    public float rotationAmount = 7f;  
+    public float delayTime = 0.3f;      
     private bool isDelayed = true;
 
     void Start()

@@ -19,13 +19,13 @@ public class Perceptron
         }
     }
 
-    // Activation function (Sigmoid/Step)
+    
     private int Activate(float sum)
     {
-        return (sum >= 0) ? 1 : 0; // Step function
+        return (sum >= 0) ? 1 : 0; 
     }
 
-    // Get prediction based on inputs
+    
     public int Predict(float[] inputs)
     {
         float sum = bias;
@@ -36,13 +36,13 @@ public class Perceptron
         return Activate(sum);
     }
 
-    // Train perceptron using error correction
+    
     public void Train(float[] inputs, int targetOutput)
     {
         int prediction = Predict(inputs);
         int error = targetOutput - prediction;
 
-        // Adjust weights and bias
+        
         for (int i = 0; i < weights.Length; i++)
         {
             weights[i] += learningRate * error * inputs[i];

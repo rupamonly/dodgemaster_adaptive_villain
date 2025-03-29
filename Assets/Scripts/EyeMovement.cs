@@ -13,7 +13,7 @@ public class EyeMovement : MonoBehaviour
 
     void Update()
     {
-        // Smooth up and down motion using Mathf.Sin
+    
         float newY = startPos.y + Mathf.Sin(Time.time * moveSpeed) * moveAmount;
         transform.localPosition = new Vector3(startPos.x, newY, startPos.z);
     }
